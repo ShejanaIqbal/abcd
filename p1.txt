@@ -1,0 +1,9 @@
+declare
+ e_emp_id NUMBER := 100;
+ e_emp_fname Varchar(50) :='Firstname';
+ e_emp_salary NUMBER(10):=10000;
+begin 
+SELECT emp_id,emp_fname,emp_salary INTO e_emp_id,e_emp_fname,e_emp_salary
+FROM Employee WHERE emp_id=1003;
+DBMS_OUTPUT.PUT_LINE('Employee details'||e_emp_id||' '||e_emp_fname||' '||e_emp_salary);
+end;
